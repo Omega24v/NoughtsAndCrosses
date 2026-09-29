@@ -1,0 +1,32 @@
+:root {
+	--ink: #243a35;
+	--muted-ink: #64746f;
+	--surface: #ffffff;
+	--page: #f2f6f3;
+	--line: #dce6e1;
+	--mark-x: #c55743;
+	--mark-o: #267b78;
+	--accent: #284e45;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background-color: var(--page);
+	background-image: linear-gradient(rgba(40, 78, 69, 0.035) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(40, 78, 69, 0.035) 1px, transparent 1px);
+	background-size: 28px 28px;
+	color: var(--ink);
+	font-family: 'Trebuchet MS', 'Avenir Next', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

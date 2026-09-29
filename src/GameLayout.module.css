@@ -1,0 +1,46 @@
+.game {
+	width: min(100%, 390px);
+	margin: 0 auto;
+	padding: 28px 24px 24px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
+	box-shadow: 0 16px 40px rgba(36, 58, 53, 0.09);
+	display: grid;
+	justify-items: center;
+	gap: 22px;
+	text-align: center;
+}
+
+.restartButton {
+	min-height: 44px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 6px;
+	background: var(--accent);
+	color: #fff;
+	font: inherit;
+	font-size: 0.95rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.restartButton:hover {
+	background: #1f3f37;
+}
+
+.restartButton:active {
+	transform: translateY(1px);
+}
+
+.restartButton:focus-visible {
+	outline: 3px solid #e8a36d;
+	outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+	.game {
+		padding: 24px 16px 18px;
+	}
+}
