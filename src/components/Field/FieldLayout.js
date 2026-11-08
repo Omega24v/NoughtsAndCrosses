@@ -1,7 +1,11 @@
+import { useSyncExternalStore } from 'react';
+import { store } from '../../store';
 import styles from './FiledLayout.module.css';
 import PropTypes from 'prop-types';
 
-export const FieldLayout = ({ field, handleCellClick }) => {
+export const FieldLayout = ({ handleCellClick }) => {
+	const { field } = useSyncExternalStore(store.subscribe, store.getState);
+
 	return (
 		<div className={styles['grid-board']}>
 			{field.map((cell, index) => {
@@ -21,6 +25,5 @@ export const FieldLayout = ({ field, handleCellClick }) => {
 };
 
 FieldLayout.propTypes = {
-	field: PropTypes.arrayOf(PropTypes.string).isRequired,
 	handleCellClick: PropTypes.func.isRequired,
 };
