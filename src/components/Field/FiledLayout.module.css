@@ -1,0 +1,49 @@
+.grid-board {
+	display: grid;
+	width: min(100%, 336px);
+	aspect-ratio: 1;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+	gap: 8px;
+	margin: 0 auto;
+}
+
+.cell {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: #edf3f0;
+	color: var(--ink);
+	display: grid;
+	place-items: center;
+	font: inherit;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
+	transition:
+		background-color 150ms ease,
+		border-color 150ms ease,
+		transform 150ms ease;
+}
+
+.cell:hover {
+	border-color: #a9beb5;
+	background: #e2ece7;
+}
+
+.cell:active {
+	transform: scale(0.97);
+}
+
+.cell:focus-visible {
+	outline: 3px solid #e8a36d;
+	outline-offset: 2px;
+}
+
+.cell[data-mark='X'] {
+	color: var(--mark-x);
+}
+
+.cell[data-mark='O'] {
+	color: var(--mark-o);
+}
